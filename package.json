@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon --watch html  -e html index.js"
+    "dev": "exec nodemon -V  --watch html  -e html index.js"
   },
   "repository": {
     "type": "git",

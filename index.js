@@ -1,7 +1,6 @@
 var http = require('http');
 var fs = require('fs');
 
-
 var http_server = http.createServer( (req, res) => {
     console.log("got request for: ",req.url.toString())
     let fn = "index.html";
