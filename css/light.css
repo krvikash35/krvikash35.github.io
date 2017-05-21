@@ -1979,7 +1979,7 @@ html {
     html {
       font-size: 15px; } }
 
-h1, h2, h3, .bk-cont .bk-pg .bk-pg-content .bk-article .bk-article-title, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6 {
   font-weight: 500;
   line-height: 1.1; }
 
@@ -1993,7 +1993,7 @@ h2 {
   line-height: 110%;
   margin: 1.78rem 0 1.424rem 0; }
 
-h3, .bk-cont .bk-pg .bk-pg-content .bk-article .bk-article-title {
+h3 {
   font-size: 2.92rem;
   line-height: 110%;
   margin: 1.46rem 0 1.168rem 0; }
@@ -2031,7 +2031,11 @@ h6 {
 .black {
   font-weight: 900; }
 
-p, .bk-cont .bk-pg .bk-pg-content .bk-article .bk-article-para {
+.para-title, .bk-cont .bk-pg .bk-pg-content .bk-article .bk-article-title {
+  font-weight: 500;
+  font-size: 2.92rem; }
+
+.para, .bk-cont .bk-pg .bk-pg-content .bk-article .bk-article-para {
   font-weight: 300;
   font-size: 1.4rem; }
 
@@ -2464,6 +2468,11 @@ input::-webkit-inner-spin-button {
     margin: 15px 15px;
     border-radius: 15px;
     overflow: auto; }
+    .bk-cont .bk-nav img {
+      margin-left: 30%;
+      max-height: 60px;
+      max-width: 60px;
+      border-radius: 50%; }
     .bk-cont .bk-nav ul {
       list-style: none;
       margin: 8px 0;
@@ -2502,8 +2511,9 @@ input::-webkit-inner-spin-button {
       overflow: auto;
       padding: 0 10px; }
       .bk-cont .bk-pg .bk-pg-hdr .branding img {
-        max-height: 32px;
-        max-width: 175px; }
+        max-height: 60px;
+        max-width: 60px;
+        border-radius: 50%; }
       .bk-cont .bk-pg .bk-pg-hdr .nav {
         display: flex;
         text-transform: uppercase;
@@ -2519,6 +2529,9 @@ input::-webkit-inner-spin-button {
       border-radius: 15px; }
       .bk-cont .bk-pg .bk-pg-content .bk-article {
         padding: 15px; }
+        .bk-cont .bk-pg .bk-pg-content .bk-article .bk-article-title {
+          font-size: 30px;
+          font-weight: 500; }
         .bk-cont .bk-pg .bk-pg-content .bk-article .bk-article-para {
           word-break: break-all; }
         .bk-cont .bk-pg .bk-pg-content .bk-article .bk-article-code {
@@ -2528,9 +2541,12 @@ input::-webkit-inner-spin-button {
 
 @media (min-width: 800px) {
   .menu-toggle {
+    display: none; }
+
+  .bk-nav img {
     display: none; } }
 @media (max-width: 800px) {
-  .bk-nav, .branding .img {
+  .bk-nav, .branding img {
     display: none; }
 
   .bk-cont .bk-pg {
