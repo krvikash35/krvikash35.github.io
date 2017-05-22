@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/dark.css">
     <!--<link href="https://fonts.googleapis.com/css?family=Roboto:300,400" rel="stylesheet">-->
-    <link href="https://fonts.googleapis.com/css?family=Lato:300,400" type="text/css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,500,700" type="text/css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
@@ -65,7 +65,7 @@
     <a href="#"><i class="material-icons text-purple">adb</i><span>Web Technology Basic</span></a>
     <ul>
       <li><a href="#"><i class="material-icons text-teal">home</i><span>Javascript</span></a>
-      <li><a href="#"><i class="material-icons text-blue">home</i><span>CSS</span></a>
+      <li><a href="#webbasic.css"><i class="material-icons text-blue">home</i><span>CSS</span></a>
       <li><a href="#"><i class="material-icons text-yellow">home</i><span>HTML</span></a>
     </ul>
   </li>
@@ -106,13 +106,13 @@
 </div>
         <div class="bk-pg-content">
 
-            <div id="linux" class="bk-article">
+            <!--<div id="linux" class="bk-article">
     <div class="bk-article-title"> Linux
     </div>
     <div class="bk-article-para">This site aims to be a comprehensive guide to Jekyll. We’ll cover topics such as getting your site up and running, creating
         and managing your content, customizing the way your site works and looks, deploying to various environments, and
-        give you some advice on participating in the future development of Jekyll itself. </div>
-    <div class="bk-article-code">
+        give you some advice on participating in the future development of Jekyll itself. </div>-->
+    <!--<div class="bk-article-code">
         <pre>
                             <code class="javascript">
     'use strict'
@@ -125,31 +125,77 @@
     //this is comment
                             </code>
                         </pre>
-    </div>
-</div>
+    </div>-->
+<!--</div>-->
             <div class="divider"> </div>
-            <div id="linux" class="bk-article">
-    <div class="bk-article-title"> Linux
+            
+            <div class="divider"> </div>
+            <div id="webbasic.css" class="bk-article">
+    <div class="bk-article-title">Transition Transformation Animation
     </div>
-    <div class="bk-article-para">This site aims to be a comprehensive guide to Jekyll. We’ll cover topics such as getting your site up and running, creating
-        and managing your content, customizing the way your site works and looks, deploying to various environments, and
-        give you some advice on participating in the future development of Jekyll itself. </div>
-    <div class="bk-article-code">
+    <div class="bk-article-para">
+             These three features are part of CSS3. All three are different to each other but having 
+            one common thing 'motion'. so due to this common thing, sometimes they are used together or interchangeably.
+    </div>
+    <div class="bk-article-para">
+        <blockquote>Transition allow us to control how fast or smooth an css property of an element will change.
+        Transformation allow us to change the physical properties(size, shape etc) of element.
+        Animation are like mix of transition and Transformation.</blockquote>
+    </div>
+    <div class="bk-article-para">
+
+    </div>
+ 
+<div class="bk-article-code">
+        <div class="bk-article-code-card">
         <pre>
-                            <code class="javascript">
-    'use strict'
-    let exp = require('express');
-    let app = exp();
-    app.listen('8080', function() {
-        console.log('mycss server listening on 8080');
-    })
-    app.use(exp.static(__dirname));
-    //this is comment
-                            </code>
-                        </pre>
+            <code class="css">
+div {
+    width: 100px;
+    height: 100px;
+    transition-property: "width";
+    transition-duration: 2s;
+    transition-timing-function: "linear";//ease,linear,ease-in,ease-out,ease-in-out
+    transition-delay: 1s;
+}
+div{
+    transition: width 2s linear 1s;//shorthand properties
+}            </code>
+        </pre>
+    </div>
+
+       <div class="bk-article-code-card">
+        <pre>
+            <code class="css">
+div {
+    transform: rotate(7deg);
+}
+            </code>
+        </pre>
+    </div>
+
+        <div class="bk-article-code-card">
+        <pre>
+            <code class="css">
+@keyframes example {
+    from {background-color: red;}
+    to {background-color: yellow;}
+}
+div {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    animation-name: example;
+    animation-duration: 4s;
+}
+            </code>
+        </pre>
     </div>
 </div>
-            <div class="divider"> </div>
+
+</div>
+            <div class="divider"></div>
+
 
         </div>
     </div>

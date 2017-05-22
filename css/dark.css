@@ -1612,7 +1612,7 @@
  *    without disabling user zoom.
  */
 html, body {
-  font-family: 'Lato', sans-serif;
+  font-family: 'Roboto', sans-serif;
   /* 1 */
   -ms-text-size-adjust: 100%;
   /* 2 */
@@ -1994,9 +1994,9 @@ h2 {
   margin: 1.78rem 0 1.424rem 0; }
 
 h3 {
-  font-size: 2.92rem;
+  font-size: 2.2rem;
   line-height: 110%;
-  margin: 1.46rem 0 1.168rem 0; }
+  margin: 1.1rem 0 0.88rem 0; }
 
 h4 {
   font-size: 2.28rem;
@@ -2032,12 +2032,23 @@ h6 {
   font-weight: 900; }
 
 .para-title, .bk-cont .bk-pg .bk-pg-content .bk-article .bk-article-title {
-  font-weight: 500;
-  font-size: 2.92rem; }
+  font-weight: 400;
+  font-size: 2.2rem;
+  line-height: 0.9;
+  word-break: break-all;
+  margin-bottom: 1.5rem; }
 
 .para, .bk-cont .bk-pg .bk-pg-content .bk-article .bk-article-para {
   font-weight: 300;
-  font-size: 1.4rem; }
+  font-size: 1.4rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.2; }
+
+blockquote {
+  font-weight: 100;
+  font-style: italic;
+  font-size: 1.4rem;
+  color: #FFFFFF; }
 
 /*
 1. center
@@ -2535,15 +2546,21 @@ input::-webkit-inner-spin-button {
       border-radius: 15px; }
       .bk-cont .bk-pg .bk-pg-content .bk-article {
         padding: 15px; }
-        .bk-cont .bk-pg .bk-pg-content .bk-article .bk-article-title {
-          font-size: 30px;
-          font-weight: 500; }
         .bk-cont .bk-pg .bk-pg-content .bk-article .bk-article-para {
           word-break: break-all; }
         .bk-cont .bk-pg .bk-pg-content .bk-article .bk-article-code {
-          background-color: #212121;
-          border-radius: 10px;
-          box-shadow: 0px 0px 2px 2px #212121; }
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          align-content: center;
+          align-items: stretch;
+          flex-wrap: wrap; }
+          .bk-cont .bk-pg .bk-pg-content .bk-article .bk-article-code .bk-article-code-card {
+            background-color: #212121;
+            border-radius: 10px;
+            box-shadow: 0px 0px 2px 2px #212121;
+            flex: 0 1 500px;
+            margin-bottom: 15px; }
 
 @media (min-width: 800px) {
   .menu-toggle {

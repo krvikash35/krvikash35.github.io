@@ -1,0 +1,64 @@
+<div id="webbasic.css" class="bk-article">
+    <div class="bk-article-title">Transition Transformation Animation
+    </div>
+    <div class="bk-article-para">
+             These three features are part of CSS3. All three are different to each other but having 
+            one common thing 'motion'. so due to this common thing, sometimes they are used together or interchangeably.
+    </div>
+    <div class="bk-article-para">
+        <blockquote>Transition allow us to control how fast or smooth an css property of an element will change.
+        Transformation allow us to change the physical properties(size, shape etc) of element.
+        Animation are like mix of transition and Transformation.</blockquote>
+    </div>
+    <div class="bk-article-para">
+
+    </div>
+ 
+<div class="bk-article-code">
+        <div class="bk-article-code-card">
+        <pre>
+            <code class="css">
+div {
+    width: 100px;
+    height: 100px;
+    transition-property: "width";
+    transition-duration: 2s;
+    transition-timing-function: "linear";//ease,linear,ease-in,ease-out,ease-in-out
+    transition-delay: 1s;
+}
+div{
+    transition: width 2s linear 1s;//shorthand properties
+}            </code>
+        </pre>
+    </div>
+
+       <div class="bk-article-code-card">
+        <pre>
+            <code class="css">
+div {
+    transform: rotate(7deg);
+}
+            </code>
+        </pre>
+    </div>
+
+        <div class="bk-article-code-card">
+        <pre>
+            <code class="css">
+@keyframes example {
+    from {background-color: red;}
+    to {background-color: yellow;}
+}
+div {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    animation-name: example;
+    animation-duration: 4s;
+}
+            </code>
+        </pre>
+    </div>
+</div>
+
+</div>
