@@ -1601,7 +1601,7 @@
   color: transparent !important; }
 
 /* 1. Typography
-   ========================================================================== */
+    ========================================================================== */
 /* 2. Colors
    ========================================================================== */
 /* 4. Buttons
@@ -2549,32 +2549,22 @@ input::-webkit-inner-spin-button {
         .bk-cont .bk-pg .bk-pg-content .bk-article .bk-article-para {
           word-break: break-all; }
         .bk-cont .bk-pg .bk-pg-content .bk-article .bk-article-code {
-          display: flex;
-          flex-direction: row;
-          justify-content: space-between;
-          align-content: center;
-          align-items: stretch;
-          flex-wrap: wrap; }
-          .bk-cont .bk-pg .bk-pg-content .bk-article .bk-article-code .bk-article-code-card {
-            background-color: #212121;
-            border-radius: 10px;
-            box-shadow: 0px 0px 2px 2px #212121;
-            flex: 0 1 500px;
-            margin-bottom: 15px; }
+          background-color: #212121;
+          border-radius: 10px;
+          box-shadow: 0px 0px 2px 2px #212121;
+          margin-bottom: 10px; }
 
 @media (min-width: 800px) {
   .menu-toggle {
     display: none; }
-
   .bk-nav img {
     display: none; } }
+
 @media (max-width: 800px) {
   .bk-nav, .branding img {
     display: none; }
-
   .bk-cont .bk-pg {
     margin: 5px 10px; }
-
   .bk-nav {
     position: absolute;
     top: 70px;
@@ -2589,6 +2579,7 @@ input::-webkit-inner-spin-button {
     .bk-nav.open {
       left: -15px;
       box-shadow: 2px 0 8px rgba(0, 0, 0, 0.24); } }
+
 .hljs,
 .hljs-subst {
   color: #aaaaaa; }
