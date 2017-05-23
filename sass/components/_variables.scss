@@ -13,9 +13,10 @@
  $h5-fontsize: 1.4rem !default;
  $h6-fontsize: 1rem !default;
 
+
 /* 2. Colors
    ========================================================================== */
-$theme-type: "dark" !default; 
+$theme-type: "light" !default; 
 $theme-color: "grey" !default;
 $primary-color: color($theme-color, "darken-4") !default;
 $secondary-color: color($theme-color, "darken-3") !default;
