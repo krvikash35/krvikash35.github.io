@@ -1,0 +1,71 @@
+html{
+  line-height: 1.5;
+  @media (min-width: 0)  {
+    font-size: 12px;
+  }
+  @media (min-width: $small-screen)  {
+    font-size: 13px;
+  }
+  @media (min-width: $medium-screen) {
+    font-size: 14px;
+  }
+  @media (min-width: $large-screen){
+    font-size: 15px;
+  }
+}
+h1, h2, h3, h4, h5, h6 {
+	font-weight: 500;
+	line-height: 1.1;
+}
+
+// Header Styles
+// h1 a, h2 a, h3 a, h4 a, h5 a, h6 a { font-weight: inherit; }
+h1 { font-size: $h1-fontsize; line-height: 110%; margin: ($h1-fontsize / 2) 0 ($h1-fontsize / 2.5) 0;}
+h2 { font-size: $h2-fontsize; line-height: 110%; margin: ($h2-fontsize / 2) 0 ($h2-fontsize / 2.5) 0;}
+h3 { font-size: $h3-fontsize; line-height: 110%; margin: ($h3-fontsize / 2) 0 ($h3-fontsize / 2.5) 0;}
+h4 { font-size: $h4-fontsize; line-height: 110%; margin: ($h4-fontsize / 2) 0 ($h4-fontsize / 2.5) 0;}
+h5 { font-size: $h5-fontsize; line-height: 110%; margin: ($h5-fontsize / 2) 0 ($h5-fontsize / 2.5) 0;}
+h6 { font-size: $h6-fontsize; line-height: 110%; margin: ($h6-fontsize / 2) 0 ($h6-fontsize / 2.5) 0;}
+
+
+.thin{
+  font-weight: 100
+}
+.light{
+  font-weight: 300
+}
+.regular{
+  font-weight: 400
+}
+.medium{
+  font-weight: 500
+}
+.bold{
+  font-weight: 700
+}
+.black{
+  font-weight: 900
+}
+
+.para-title{
+  font-weight: 400;
+  font-size: $h3-fontsize;
+  line-height: 0.9;
+  word-break: break-all;
+  margin-bottom: 1.5rem;
+}
+.para{
+  font-weight: 300;
+  font-size: $h5-fontsize;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+
+blockquote{
+  font-weight: 100;
+  font-style: italic;
+  font-size: $h5-fontsize;
+  color: $text-color;
+  // margin: 0;
+  // padding: 0;
+}

@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "exec nodemon -V  --watch html  -e html index.js"
+    "sass": "node-sass --sourcemap=none  -w=sass sass/index.scss css/light.css",
+    "nodemon": "nodemon -V  --watch html  -e html index.js",
+    "dev": "concurrently -kill-others \"npm run sass\" \"npm run nodemon\" "
   },
   "repository": {
     "type": "git",
@@ -16,5 +18,10 @@
   "bugs": {
     "url": "https://github.com/krvikash35/krvikash35.github.io/issues"
   },
-  "homepage": "https://github.com/krvikash35/krvikash35.github.io#readme"
+  "homepage": "https://github.com/krvikash35/krvikash35.github.io#readme",
+  "devDependencies": {
+    "concurrently": "^3.4.0",
+    "node-sass": "^4.5.3",
+    "nodemon": "^1.11.0"
+  }
 }
