@@ -15,6 +15,9 @@ var http_server = http.createServer( (req, res) => {
     }else if( req.url.endsWith( '.js' ) ){
          fn = req.url.substring(1, req.url.length)
         ct = "text/javascript"
+    }else if( req.url.endsWith( ".html" ) ){
+        fn = req.url.substring(1, req.url.length)
+        ct = "text/html"
     }
     sendHttpResponse(fn, ct, res)
 })

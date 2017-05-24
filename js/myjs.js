@@ -108,7 +108,10 @@ var myjs = (function(){
    }
 
    var updateTitleOnScroll = function(){
-       let articleEle = document.querySelectorAll("bk-cont bk-pg bk-pg-content bk-article");
+       let articleEles = document.querySelectorAll("bk-cont bk-pg bk-pg-content bk-article");
+       for(var i=0; i<articleEles.length; i++){
+        //    articleEles[i].addEventListener("onscr")
+       }
    }
 
     return {
