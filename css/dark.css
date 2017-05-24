@@ -2565,16 +2565,17 @@ input::-webkit-inner-spin-button {
     margin: 5px 10px; }
   .bk-nav {
     position: absolute;
-    top: 70px;
+    top: 0px;
     left: -271px;
     width: 256px;
     height: 80vh;
     margin: 0;
     padding: 0;
     display: block;
-    transition: left 0.5s ease;
+    transition: all 0.5s ease;
     overflow: auto; }
     .bk-nav.open {
+      top: 70px;
       left: -15px;
       box-shadow: 2px 0 8px rgba(0, 0, 0, 0.24); } }
 

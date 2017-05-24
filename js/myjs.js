@@ -1,4 +1,41 @@
 var myjs = (function(){
+
+    let slideInOutOnSwipe = function(){
+        let pageEle = document.getElementById("page"),
+            navEle = document.getElementById("nav"),
+            startx,
+            starty,
+            distx,
+            disty,
+            qualifyDistPxl = 150,
+            allowedDiagonalPxl = 100,
+            startTime,
+            elapsedTime,
+            allowedTimeInMilli = 300;
+        pageEle.addEventListener('touchstart', (e)=> {
+            let touchedObj1 = e.changedTouches[0]; //if multitouch, get one of touch point
+            startx = touchedObj1.pageX;
+            starty = touchedObj1.pageY;
+            startTime = new Date().getTime();
+            console.log("startxy", startx, starty)
+        })
+        pageEle.addEventListener('touchmove', ()=>{
+
+        })
+        pageEle.addEventListener('touchend',(e)=>{
+            let touchedObj1 = e.changedTouches[0], //if multitouch, get one of touch point
+            distx = touchedObj1.pageX - startx;
+            disty = touchedObj1.pageY - starty;
+            elapsedTime = new Date().getTime() - startTime;
+            console.log("distxy", startx, distx, disty, elapsedTime);
+
+            //if swipe left then, open the menu drawer 
+            if(startx <150 && distx < qualifyDistPxl && disty < allowedDiagonalPxl ){
+                console.log("lef swipe")
+                navEle.classList.add("open");
+            }
+        })
+    }
      
     var navIntialize = function(){
         let activeNavMenuID = null;
@@ -38,7 +75,7 @@ var myjs = (function(){
     }
 
 
-   var  menuToggleOnClick = function(){
+   var  hideShowOnClick = function(){
        let fnMenuToggleListener = function(){
            let bn = document.querySelector(".bk-nav");
            if(!bn.classList.contains('open')){
@@ -74,7 +111,8 @@ var myjs = (function(){
     return {
         nav: {
             navIntialize: navIntialize,
-            menuToggleOnClick: menuToggleOnClick
+            hideShowOnClick: hideShowOnClick,
+            slideInOutOnSwipe: slideInOutOnSwipe
         },
         theme: {
             toggleTheme: toggleTheme
@@ -83,5 +121,6 @@ var myjs = (function(){
 })();
 
 myjs.nav.navIntialize();
-myjs.nav.menuToggleOnClick();
+myjs.nav.hideShowOnClick();
+myjs.nav.slideInOutOnSwipe();
 myjs.theme.toggleTheme();
