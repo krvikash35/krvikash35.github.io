@@ -17,7 +17,6 @@ var myjs = (function(){
             startx = touchedObj1.pageX;
             starty = touchedObj1.pageY;
             startTime = new Date().getTime();
-            console.log("startxy", startx, starty)
         })
         pageEle.addEventListener('touchmove', ()=>{
 
@@ -27,12 +26,12 @@ var myjs = (function(){
             distx = touchedObj1.pageX - startx;
             disty = touchedObj1.pageY - starty;
             elapsedTime = new Date().getTime() - startTime;
-            console.log("distxy", startx, distx, disty, elapsedTime);
 
             //if swipe left then, open the menu drawer 
             if(startx <150 && distx < qualifyDistPxl && disty < allowedDiagonalPxl ){
-                console.log("lef swipe")
                 navEle.classList.add("open");
+            }else if(startx > 150 && distx > -qualifyDistPxl && disty < allowedDiagonalPxl){
+                navEle.classList.remove("open");
             }
         })
     }
