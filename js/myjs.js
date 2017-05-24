@@ -7,7 +7,7 @@ var myjs = (function(){
             starty,
             distx,
             disty,
-            qualifyDistPxl = 150,
+            qualifyDistPxl = 250,
             allowedDiagonalPxl = 100,
             startTime,
             elapsedTime,
