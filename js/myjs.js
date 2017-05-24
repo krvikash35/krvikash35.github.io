@@ -18,9 +18,9 @@ var myjs = (function(){
             starty = touchedObj1.pageY;
             startTime = new Date().getTime();
         })
-        pageEle.addEventListener('touchmove', ()=>{
+        // pageEle.addEventListener('touchmove', ()=>{
 
-        })
+        // })
         pageEle.addEventListener('touchend',(e)=>{
             let touchedObj1 = e.changedTouches[0], //if multitouch, get one of touch point
             distx = touchedObj1.pageX - startx;
@@ -28,9 +28,9 @@ var myjs = (function(){
             elapsedTime = new Date().getTime() - startTime;
 
             //if swipe left then, open the menu drawer 
-            if(startx <150 && distx < qualifyDistPxl && disty < allowedDiagonalPxl ){
+            if(startx <150 && distx < qualifyDistPxl && Math.abs(disty) < allowedDiagonalPxl ){
                 navEle.classList.add("open");
-            }else if(startx > 150 && distx > -qualifyDistPxl && disty < allowedDiagonalPxl){
+            }else if(startx > 150 && distx > -qualifyDistPxl && Math.abs(disty) < allowedDiagonalPxl){
                 navEle.classList.remove("open");
             }
         })
@@ -107,6 +107,10 @@ var myjs = (function(){
        }
    }
 
+   var updateTitleOnScroll = function(){
+       let articleEle = document.querySelectorAll("bk-cont bk-pg bk-pg-content bk-article");
+   }
+
     return {
         nav: {
             navIntialize: navIntialize,
@@ -115,6 +119,9 @@ var myjs = (function(){
         },
         theme: {
             toggleTheme: toggleTheme
+        },
+        article: {
+            updateTitleOnScroll: updateTitleOnScroll
         }
     }
 })();
@@ -123,3 +130,4 @@ myjs.nav.navIntialize();
 myjs.nav.hideShowOnClick();
 myjs.nav.slideInOutOnSwipe();
 myjs.theme.toggleTheme();
+myjs.article.updateTitleOnScroll();

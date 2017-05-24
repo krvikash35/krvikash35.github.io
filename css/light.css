@@ -2559,6 +2559,7 @@ input::-webkit-inner-spin-button {
     margin: 5px 10px; }
   .bk-nav {
     position: absolute;
+    top: 0px;
     top: 70px;
     left: -271px;
     width: 256px;
@@ -2566,7 +2567,7 @@ input::-webkit-inner-spin-button {
     margin: 0;
     padding: 0;
     display: block;
-    transition: width 3s ease;
+    transition: all 0.4s ease;
     overflow: auto; }
     .bk-nav.open {
       left: -15px;
