@@ -2213,13 +2213,13 @@ pre {
   color: #000000;
   line-height: 70px;
   text-align: center;
-  border: 3px solid #FF80AB; }
+  border: 3px solid #DD2C00; }
 
 .bg-accent {
-  background-color: #FF80AB; }
+  background-color: #DD2C00; }
 
 .text-accent {
-  color: #FF80AB; }
+  color: #DD2C00; }
 
 .on-hover, .bk-cont .bk-nav ul li a:hover, .bk-cont .bk-nav ul li ul li a:hover, .bk-cont .bk-pg .bk-pg-hdr .clickable:hover {
   border-radius: 10px;
@@ -2270,7 +2270,7 @@ pre {
 
 .tab-item-active {
   color: #000000;
-  border-bottom: 2px solid #FF80AB; }
+  border-bottom: 2px solid #DD2C00; }
 
 .table {
   width: 100%;
@@ -2339,11 +2339,11 @@ pre {
   border-radius: 50%; }
 
 input:checked + .slider {
-  background-color: rgba(255, 128, 171, 0.5); }
+  background-color: rgba(221, 44, 0, 0.5); }
 
 input:checked + .slider:before {
   transform: translateX(17px);
-  background-color: #ff80ab; }
+  background-color: #dd2c00; }
 
 select {
   background-color: #eeeeee;
@@ -2352,7 +2352,7 @@ select {
 
 input[type="text"], input[type="number"] {
   border: none;
-  border-bottom: 1px solid #FF80AB;
+  border-bottom: 1px solid #DD2C00;
   outline: none;
   background-color: transparent; }
 
@@ -2387,7 +2387,7 @@ input::-webkit-inner-spin-button {
   justify-content: space-between; }
 
 .card-container > .card > .card-footer > button {
-  color: #FF80AB !important; }
+  color: #DD2C00 !important; }
 
 /*
 1. btn
@@ -2430,12 +2430,12 @@ input::-webkit-inner-spin-button {
   background-color: transparent !important; }
 
 .btn-raised {
-  background-color: #FF80AB;
+  background-color: #DD2C00;
   transition: all 1s; }
   .btn-raised:active, .btn-raised:focus {
-    background-color: #ff4d89; }
+    background-color: #aa2200; }
   .btn-raised:hover {
-    background-color: #ff679a; }
+    background-color: #c42700; }
 
 .btn-raised.disabled,
 .btn-raised:disabled,
@@ -2456,13 +2456,13 @@ input::-webkit-inner-spin-button {
   justify-content: space-around;
   align-items: center;
   text-transform: uppercase;
-  background-color: #FF80AB;
+  background-color: #DD2C00;
   color: #000000;
   transition: all 1s; }
   .btn-fab:active, .btn-fab:focus {
-    background-color: #ff4d89; }
+    background-color: #aa2200; }
   .btn-fab:hover {
-    background-color: #ff679a;
+    background-color: #c42700;
     cursor: pointer; }
 
 .bk-cont {
@@ -2518,7 +2518,7 @@ input::-webkit-inner-spin-button {
       flex-direction: row;
       align-items: center;
       justify-content: space-between;
-      color: #FF80AB;
+      color: #DD2C00;
       overflow: auto;
       padding: 0 10px; }
       .bk-cont .bk-pg .bk-pg-hdr .branding img {
@@ -2578,7 +2578,7 @@ input::-webkit-inner-spin-button {
 
 @keyframes titlechange {
   50% {
-    color: yellow;
+    color: #f57f17;
     transform: scale(1.5); } }
 
 .hljs,
