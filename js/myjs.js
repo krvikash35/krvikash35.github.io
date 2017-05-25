@@ -128,7 +128,12 @@ var myjs = (function () {
                     let navSubMenu = document.querySelector("a[href=\\#" + currArtId + "]");
                     let navSubMenuText = navSubMenu.getElementsByTagName("span")[0].innerHTML;
                     let navMenuText = navSubMenu.parentElement.parentElement.parentElement.children[0].getElementsByTagName("span")[0].innerHTML;
-                    document.getElementById("title").innerHTML = navMenuText + "-->" + navSubMenuText;
+                    let titleEle = document.getElementById("title");
+                    titleEle.innerHTML = navMenuText + "-->" + navSubMenuText;
+                    // titleEle.style.transform ="scale(2)";
+                    // titleEle.style.transition="transform 0.9s ease";
+                    titleEle.style.animation="titlechange 4s";
+                    break;
                 }
             }
         }

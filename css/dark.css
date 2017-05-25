@@ -2579,6 +2579,11 @@ input::-webkit-inner-spin-button {
       left: -15px;
       box-shadow: 2px 0 8px rgba(0, 0, 0, 0.24); } }
 
+@keyframes titlechange {
+  50% {
+    color: yellow;
+    transform: scale(1.5); } }
+
 .hljs,
 .hljs-subst {
   color: #aaaaaa; }
