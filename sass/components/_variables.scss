@@ -22,8 +22,8 @@ $theme-color: "grey" !default;
    
     $primary-color: color($theme-color, "darken-4") !default;
     $secondary-color: color($theme-color, "darken-3") !default;
-    $accent-color: color("deep-orange","accent-1") ;
-    $seondary-accent-color: color("deep-orange","accent-2");
+    $accent-color: color("green","accent-3") ;
+    $seondary-accent-color: color("green","accent-2");
     $text-color: #FFFFFF !default; 
 
 @if $theme-type != "dark" {
