@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "sass": "node-sass --sourcemap=none  -w=sass sass/index.scss css/dark.css",
+    "sass": "node-sass --sourcemap=none  -w=sass sass/index.scss css/light.css",
     "nodemon": "nodemon -V  --watch html  -e html index.js",
     "dev": "concurrently --kill-others \"npm run sass\" \"npm run nodemon\" "
   },
