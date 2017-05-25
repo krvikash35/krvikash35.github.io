@@ -78,7 +78,7 @@
             align-items: center;
             justify-content: space-between;
             color: $accent-color;
-            overflow: auto;
+            overflow: hidden;
             padding: 0 10px;
             .clickable{
                 &:hover{
