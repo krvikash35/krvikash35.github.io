@@ -2538,6 +2538,9 @@ input::-webkit-inner-spin-button {
         justify-content: center;
         align-content: center;
         align-items: center; }
+        .bk-cont .bk-pg .bk-pg-hdr .nav .title {
+          animation-name: titlechange;
+          animation-duration: 2s; }
     .bk-cont .bk-pg .bk-pg-content {
       background-color: #424242;
       flex: 1;

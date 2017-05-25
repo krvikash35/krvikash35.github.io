@@ -1,4 +1,7 @@
 var myjs = (function () {
+    var book = {
+        currArtEleId: null
+    }
 
     let slideInOutOnSwipe = function () {
         let pageEle = document.getElementById("page"),
@@ -55,6 +58,10 @@ var myjs = (function () {
             let subMenuTitle = this.getElementsByTagName('span')[0].innerHTML;
             bph.innerHTML = menuTitle + "-->" + subMenuTitle;
             bn.classList.remove('open')
+
+            let oldel = bph;
+            newel = bph.cloneNode(true);
+            bph.parentNode.replaceChild(newel, oldel);
         }
         let navMenus = document.querySelectorAll(".bk-nav > ul > li > a");
         let navSubMenus = document.querySelectorAll(".bk-nav > ul > li > ul > li > a");
@@ -123,16 +130,18 @@ var myjs = (function () {
             for (var i = 0; i < articleEles.length; i++) {
                 let eleTop = articleEles[i].getBoundingClientRect().top;
                 let eleBottom = articleEles[i].getBoundingClientRect().bottom;
-                if (eleTop < window.innerHeight && eleBottom > window.innerHeight) {
-                    let currArtId = articleEles[i].id;
+                let scrollArticleEleId = articleEles[i].id;
+                if (eleTop < window.innerHeight && eleBottom > window.innerHeight && book.currArtEleId!=scrollArticleEleId) {
+                    book.currArtEleId = scrollArticleEleId;
+                    let currArtId = book.currArtEleId;
                     let navSubMenu = document.querySelector("a[href=\\#" + currArtId + "]");
                     let navSubMenuText = navSubMenu.getElementsByTagName("span")[0].innerHTML;
                     let navMenuText = navSubMenu.parentElement.parentElement.parentElement.children[0].getElementsByTagName("span")[0].innerHTML;
                     let titleEle = document.getElementById("title");
-                    titleEle.innerHTML = navMenuText + "-->" + navSubMenuText;
-                    // titleEle.style.transform ="scale(2)";
-                    // titleEle.style.transition="transform 0.9s ease";
-                    titleEle.style.animation="titlechange 4s";
+                    titleEle.innerHTML = navMenuText+"-->"+navSubMenuText;
+                    let oldel = titleEle;
+                    newel = titleEle.cloneNode(true);
+                    titleEle.parentNode.replaceChild(newel, oldel);
                     break;
                 }
             }
@@ -142,6 +151,17 @@ var myjs = (function () {
         pageEle.addEventListener("scroll", throttle(callback, 1000))
     }
 
+    function setCurrArticleEleId(){
+        let artEls = document.querySelectorAll(".bk-cont .bk-pg .bk-pg-content .bk-article");
+        for(var i=0; i<artEls.length; i++){
+            let elTop = artEls[i].getBoundingClientRect().top;
+            let elBottom = artEls[i].getBoundingClientRect().bottom;
+            let windowHeight = window.innerHeight;
+            if( elTop>windowHeight && elBottom>windowHeight){
+                return book.currArtEleId = artEls[i].id;
+            }
+        }
+    }
     return {
         nav: {
             navIntialize: navIntialize,
@@ -152,7 +172,8 @@ var myjs = (function () {
             toggleTheme: toggleTheme
         },
         article: {
-            updateTitleOnScroll: updateTitleOnScroll
+            updateTitleOnScroll: updateTitleOnScroll,
+            setCurrArticleEleId: setCurrArticleEleId
         }
     }
 })();
@@ -162,3 +183,4 @@ myjs.nav.hideShowOnClick();
 myjs.nav.slideInOutOnSwipe();
 myjs.theme.toggleTheme();
 myjs.article.updateTitleOnScroll();
+myjs.article.setCurrArticleEleId();
