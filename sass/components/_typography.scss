@@ -57,13 +57,13 @@ h6 { font-size: $h6-fontsize; line-height: 110%; margin: ($h6-fontsize / 2) 0 ($
 .para{
   font-weight: 300;
   font-size: $h5-fontsize;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
   line-height: 1.2;
 }
 
 blockquote{
   font-weight: 100;
-  font-style: italic;
+  font-style: normal;
   font-size: $h5-fontsize;
   color: $text-color;
   margin: 10px;
