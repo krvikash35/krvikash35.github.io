@@ -166,11 +166,11 @@ var myjs = (function () {
     function getArticleOnSubMenuClick(){
         let xhttp = new XMLHttpRequest();
         let subMenuEles = document.querySelectorAll(".bk-nav > ul > li > ul > li > a");
-        let articlePageEle = document.getElementById('page')
+        let articlePageEle = document.getElementById('articles')
         for(var i=0; i<subMenuEles.length; i++){
             subMenuEles[i].addEventListener('click', fnSubMenuOnClick);
         }
-        subMenuEles[0].click()
+        subMenuEles[1].click()
         function fnSubMenuOnClick(e){
             e.preventDefault()
             let article_file_name = this.getAttribute('data-aritcle_file_name');
@@ -180,15 +180,54 @@ var myjs = (function () {
                     if( this.status == 200 ){
                         articlePageEle.innerHTML = xhttp.responseText;
                     }else{
-                        articlePageEle.innerHTML = "<h3>No Article Found</h3>";
+                        articlePageEle.innerHTML = "<article><h3>No Article Found</h3></article>";
                     }
                 }else{
-                    articlePageEle.innerHTML = "<h3>Please Wait...</h3>";
+                    articlePageEle.innerHTML = "<article><h3>Please Wait...</h3></article>";
                 }
             }
             xhttp.open("GET", "/article/"+article_file_name, true)
             xhttp.send()
         }
+    }
+
+    function updateArtProgOnScroll(){
+        let pageEle = document.getElementById("page");
+        let artEle = document.getElementById("articles");
+        let progEle = document.getElementById("art_prog_bar");
+        let pageBottom = pageEle.getBoundingClientRect().bottom;
+        let OrigArtBottom = artEle.getBoundingClientRect().bottom;
+        pageEle.addEventListener("scroll", throttle(callback, 1000))
+
+        function throttle(fn, wait) {
+            var time = Date.now();
+            return function () {
+                if ((time + wait - Date.now()) < 0) {
+                    fn();
+                    time = Date.now();
+                }
+            }
+
+        }
+
+        function callback(){
+            let top = artEle.getBoundingClientRect().top;
+            let bottom = artEle.getBoundingClientRect().bottom;
+            let height = artEle.getBoundingClientRect().bottom;
+            let window_height = window.innerHeight
+            let page_ele_height = pageEle.clientHeight;
+            // if( height < page_ele_height ){
+            //     progEle.style.width="50%"
+            // }
+            
+            let CurrArtBottom = artEle.getBoundingClientRect().bottom;
+            console.log(CurrArtBottom, OrigArtBottom, pageBottom)
+            let percentScroll = (pageBottom-CurrArtBottom)/(OrigArtBottom-pageBottom)
+            console.log(percentScroll*100)
+            // console.log(top, bottom, height, page_ele_height, window_height)
+        }
+
+
     }
 
     return {
@@ -202,7 +241,8 @@ var myjs = (function () {
         },
         article: {
             updateTitleOnScroll: updateTitleOnScroll,
-            setCurrArticleEleId: setCurrArticleEleId
+            setCurrArticleEleId: setCurrArticleEleId,
+            updateArtProgOnScroll: updateArtProgOnScroll
         },
         xhr: {
             getArticleOnSubMenuClick: getArticleOnSubMenuClick
@@ -214,6 +254,7 @@ myjs.nav.navIntialize();
 myjs.nav.hideShowOnClick();
 myjs.nav.slideInOutOnSwipe();
 myjs.theme.toggleTheme();
-myjs.article.updateTitleOnScroll();
+// myjs.article.updateTitleOnScroll();
+myjs.article.updateArtProgOnScroll()
 myjs.article.setCurrArticleEleId();
 myjs.xhr.getArticleOnSubMenuClick();
