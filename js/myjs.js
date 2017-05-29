@@ -162,6 +162,35 @@ var myjs = (function () {
             }
         }
     }
+
+    function getArticleOnSubMenuClick(){
+        let xhttp = new XMLHttpRequest();
+        let subMenuEles = document.querySelectorAll(".bk-nav > ul > li > ul > li > a");
+        let articlePageEle = document.getElementById('page')
+        for(var i=0; i<subMenuEles.length; i++){
+            subMenuEles[i].addEventListener('click', fnSubMenuOnClick);
+        }
+        function fnSubMenuOnClick(e){
+            e.preventDefault()
+            let article_file_name = this.getAttribute('data-aritcle_file_name');
+            console.log(article_file_name);
+            xhttp.onreadystatechange = function(){
+                if (this.readyState == 4 ) {
+                    if( this.status == 200 ){
+                        articlePageEle.innerHTML = xhttp.responseText;
+                    }else{
+                        articlePageEle.innerHTML = "<h3>No Article Found</h3>";
+                    }
+                }else{
+                    articlePageEle.innerHTML = "<h3>Please Wait...</h3>";
+                }
+            }
+            xhttp.open("GET", "/article/"+article_file_name, true)
+            xhttp.send()
+        }
+        // console.log("got submenu ", subMenuEles)
+    }
+
     return {
         nav: {
             navIntialize: navIntialize,
@@ -174,6 +203,9 @@ var myjs = (function () {
         article: {
             updateTitleOnScroll: updateTitleOnScroll,
             setCurrArticleEleId: setCurrArticleEleId
+        },
+        xhr: {
+            getArticleOnSubMenuClick: getArticleOnSubMenuClick
         }
     }
 })();
@@ -184,3 +216,4 @@ myjs.nav.slideInOutOnSwipe();
 myjs.theme.toggleTheme();
 myjs.article.updateTitleOnScroll();
 myjs.article.setCurrArticleEleId();
+myjs.xhr.getArticleOnSubMenuClick();

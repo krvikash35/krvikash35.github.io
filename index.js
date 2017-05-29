@@ -3,8 +3,8 @@ var fs = require('fs');
 
 var http_server = http.createServer( (req, res) => {
     console.log("got request for: ",req.url.toString())
-    let fn = "index.html";
-    let ct = "text/html";
+    // let fn = "index.html";
+    // let ct = "text/html";
 
     if( req.url === '/'){
         fn = "index.html"
@@ -18,6 +18,9 @@ var http_server = http.createServer( (req, res) => {
     }else if( req.url.endsWith( ".html" ) ){
         fn = req.url.substring(1, req.url.length)
         ct = "text/html"
+    }else {
+        res.writeHead(400)
+        return res.end()
     }
     sendHttpResponse(fn, ct, res)
 })
@@ -30,8 +33,10 @@ http_server.listen(3000, (err) => {
 function sendHttpResponse(fn, ct, res){
     fs.readFile(fn, (err, data) => {
         if(err){
-            console.log("error while reading index.html", err);
-            res.write("error while reading index.html"+err)
+            res.writeHead(404);
+            res.write("Not Found.."+fn);
+            res.end();
+            console.log("send error response....below is error details \n", err);
         }else{
             res.writeHead(200, {'Content-Type': ct});
             res.write(data);
@@ -60,4 +65,4 @@ function customJSParser(){
     fs.writeFileSync("index.html", fcontent);
 }
 
-customJSParser();
+// customJSParser();
