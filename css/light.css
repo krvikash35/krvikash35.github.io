@@ -2542,32 +2542,32 @@ input::-webkit-inner-spin-button {
       border-radius: 15px;
       display: flex;
       flex-direction: column;
-      padding: 0px;
-      margin: 0px; }
+      padding: 10px 20px; }
       .bk-cont .bk-pg .bk-pg-content article {
-        margin: 20px;
+        margin: 0px;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        align-content: center;
-        border-bottom: 1px solid black; }
+        align-content: space-between; }
         .bk-cont .bk-pg .bk-pg-content article pre {
           background-color: #e0e0e0;
           border-radius: 15px;
-          padding-left: 10px; }
+          padding-left: 10px;
+          flex: 0 0;
+          margin: 0 0 5px 0; }
         .bk-cont .bk-pg .bk-pg-content article h1, .bk-cont .bk-pg .bk-pg-content article h2, .bk-cont .bk-pg .bk-pg-content article h3, .bk-cont .bk-pg .bk-pg-content article h4, .bk-cont .bk-pg .bk-pg-content article h5 {
-          margin: 0;
+          margin: 0 0 5px 0;
           padding: 0;
           line-height: 0.8; }
         .bk-cont .bk-pg .bk-pg-content article p {
-          margin: 0;
+          margin: 0 0 20px 0;
           padding: 0;
           line-height: 1.8;
           font-weight: 400;
           font-style: normal;
           font-size: 21px; }
         .bk-cont .bk-pg .bk-pg-content article blockquote {
-          margin: 0;
+          margin: 0 20px 20px 20px;
           padding: 0;
           line-height: 1.8;
           font-weight: 300;

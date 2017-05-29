@@ -1612,7 +1612,7 @@
  *    without disabling user zoom.
  */
 html, body {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Roboto Slab', serif;
   /* 1 */
   -ms-text-size-adjust: 100%;
   /* 2 */
@@ -2032,21 +2032,21 @@ h6 {
 .black {
   font-weight: 900; }
 
-.para-title, .bk-cont .bk-pg .bk-pg-content .bk-article .btitle {
-  font-weight: 400;
+.para-title {
+  font-weight: 700;
   font-size: 2.2rem;
   line-height: 0.9;
   margin-bottom: 1.5rem; }
 
-.para, .bk-cont .bk-pg .bk-pg-content .bk-article .bpara {
-  font-weight: 300;
+.para {
+  font-weight: 400;
   font-size: 1.4rem;
   margin-bottom: 2rem;
-  line-height: 1.2; }
+  line-height: 1.8; }
 
 blockquote {
   font-weight: 100;
-  font-style: normal;
+  font-style: italic;
   font-size: 1.4rem;
   color: #FFFFFF;
   margin: 10px; }
@@ -2225,7 +2225,7 @@ pre {
 .bg-accent {
   background-color: #00E676; }
 
-.text-accent {
+.text-accent, .bk-cont .bk-pg .bk-pg-content article em {
   color: #00E676; }
 
 .on-hover, .bk-cont .bk-nav ul li a:hover, .bk-cont .bk-nav ul li ul li a:hover, .bk-cont .bk-pg .bk-pg-hdr .clickable:hover {
@@ -2544,17 +2544,43 @@ input::-webkit-inner-spin-button {
           animation-duration: 2s; }
     .bk-cont .bk-pg .bk-pg-content {
       background-color: #424242;
-      flex: 1;
-      order: 1;
       overflow: auto;
-      border-radius: 15px; }
-      .bk-cont .bk-pg .bk-pg-content .bk-article {
-        padding: 15px; }
-        .bk-cont .bk-pg .bk-pg-content .bk-article .bcode {
+      border-radius: 15px;
+      display: flex;
+      flex-direction: column;
+      padding: 10px 20px; }
+      .bk-cont .bk-pg .bk-pg-content article {
+        margin: 0px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-content: space-between; }
+        .bk-cont .bk-pg .bk-pg-content article pre {
           background-color: #212121;
-          border-radius: 10px;
-          box-shadow: 0px 0px 2px 2px #212121;
-          margin-top: 20px; }
+          border-radius: 15px;
+          padding-left: 10px;
+          flex: 0 0;
+          margin: 0 0 5px 0; }
+        .bk-cont .bk-pg .bk-pg-content article h1, .bk-cont .bk-pg .bk-pg-content article h2, .bk-cont .bk-pg .bk-pg-content article h3, .bk-cont .bk-pg .bk-pg-content article h4, .bk-cont .bk-pg .bk-pg-content article h5 {
+          margin: 0 0 5px 0;
+          padding: 0;
+          line-height: 0.8; }
+        .bk-cont .bk-pg .bk-pg-content article p {
+          margin: 0 0 20px 0;
+          padding: 0;
+          line-height: 1.8;
+          font-weight: 400;
+          font-style: normal;
+          font-size: 21px; }
+        .bk-cont .bk-pg .bk-pg-content article blockquote {
+          margin: 0 20px 20px 20px;
+          padding: 0;
+          line-height: 1.8;
+          font-weight: 300;
+          font-style: italic;
+          font-size: 21px; }
+        .bk-cont .bk-pg .bk-pg-content article em {
+          font-style: normal; }
 
 @media (min-width: 800px) {
   .menu-toggle {
