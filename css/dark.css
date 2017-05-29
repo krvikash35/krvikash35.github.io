@@ -2517,7 +2517,7 @@ input::-webkit-inner-spin-button {
     margin: 15px 50px; }
     .bk-cont .bk-pg .bk-pg-hdr {
       background-color: #424242;
-      flex: 0 64px;
+      flex: 0 0 64px;
       z-index: 0;
       margin-bottom: 15px;
       border-radius: 15px;
@@ -2550,7 +2550,9 @@ input::-webkit-inner-spin-button {
       flex-direction: column;
       padding: 10px 20px; }
       .bk-cont .bk-pg .bk-pg-content article {
-        margin: 0px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+        margin-bottom: 20px;
+        flex: 0 0;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -2562,20 +2564,28 @@ input::-webkit-inner-spin-button {
           flex: 0 0;
           margin: 0 0 5px 0; }
         .bk-cont .bk-pg .bk-pg-content article h1, .bk-cont .bk-pg .bk-pg-content article h2, .bk-cont .bk-pg .bk-pg-content article h3, .bk-cont .bk-pg .bk-pg-content article h4, .bk-cont .bk-pg .bk-pg-content article h5 {
-          margin: 0 0 5px 0;
+          margin: 0 0 10px 0;
           padding: 0;
-          line-height: 0.8; }
+          line-height: 36px; }
+        .bk-cont .bk-pg .bk-pg-content article h1 {
+          font-size: 40px; }
+        .bk-cont .bk-pg .bk-pg-content article h2 {
+          font-size: 34px; }
+        .bk-cont .bk-pg .bk-pg-content article h3 {
+          font-size: 32px; }
+        .bk-cont .bk-pg .bk-pg-content article h4 {
+          font-size: 24px; }
         .bk-cont .bk-pg .bk-pg-content article p {
           margin: 0 0 20px 0;
           padding: 0;
-          line-height: 1.8;
+          line-height: 28px;
           font-weight: 400;
           font-style: normal;
           font-size: 21px; }
         .bk-cont .bk-pg .bk-pg-content article blockquote {
           margin: 0 20px 20px 20px;
           padding: 0;
-          line-height: 1.8;
+          line-height: 28px;
           font-weight: 300;
           font-style: italic;
           font-size: 21px; }
@@ -2593,6 +2603,23 @@ input::-webkit-inner-spin-button {
     display: none; }
   .bk-cont .bk-pg {
     margin: 5px 10px; }
+    .bk-cont .bk-pg .bk-pg-content {
+      padding: 10px 10px; }
+      .bk-cont .bk-pg .bk-pg-content article h1, .bk-cont .bk-pg .bk-pg-content article h2, .bk-cont .bk-pg .bk-pg-content article h3, .bk-cont .bk-pg .bk-pg-content article h4, .bk-cont .bk-pg .bk-pg-content article h5 {
+        line-height: 36px; }
+      .bk-cont .bk-pg .bk-pg-content article h1 {
+        font-size: 32px; }
+      .bk-cont .bk-pg .bk-pg-content article h2 {
+        font-size: 30px; }
+      .bk-cont .bk-pg .bk-pg-content article h3 {
+        font-size: 26px; }
+      .bk-cont .bk-pg .bk-pg-content article h4 {
+        font-size: 22px; }
+      .bk-cont .bk-pg .bk-pg-content article p {
+        font-size: 18px; }
+      .bk-cont .bk-pg .bk-pg-content article blockquote {
+        font-size: 18px;
+        margin: 0 10px 20px 10px; }
   .bk-nav {
     position: absolute;
     top: 0px;
