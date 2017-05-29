@@ -170,6 +170,7 @@ var myjs = (function () {
         for(var i=0; i<subMenuEles.length; i++){
             subMenuEles[i].addEventListener('click', fnSubMenuOnClick);
         }
+        subMenuEles[0].click()
         function fnSubMenuOnClick(e){
             e.preventDefault()
             let article_file_name = this.getAttribute('data-aritcle_file_name');
@@ -188,7 +189,6 @@ var myjs = (function () {
             xhttp.open("GET", "/article/"+article_file_name, true)
             xhttp.send()
         }
-        // console.log("got submenu ", subMenuEles)
     }
 
     return {

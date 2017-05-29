@@ -2548,7 +2548,8 @@ input::-webkit-inner-spin-button {
       border-radius: 15px;
       display: flex;
       flex-direction: column;
-      padding: 10px 20px; }
+      padding: 10px 20px;
+      min-height: 85%; }
       .bk-cont .bk-pg .bk-pg-content article {
         border-bottom: 1px solid rgba(255, 255, 255, 0.12);
         margin-bottom: 20px;
