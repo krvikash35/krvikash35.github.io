@@ -11,8 +11,8 @@ var myjs = (function () {
             starty,
             distx,
             disty,
-            qualifyDistPxl = 250,
-            allowedDiagonalPxl = 100,
+            qualifyDistPxl = 50,
+            allowedDiagonalPxl = 50,
             startTime,
             elapsedTime,
             allowedTimeInMilli = 300;
@@ -32,9 +32,9 @@ var myjs = (function () {
             elapsedTime = new Date().getTime() - startTime;
 
             //if swipe left then, open the menu drawer 
-            if (startx < 150 && distx < qualifyDistPxl && Math.abs(disty) < allowedDiagonalPxl) {
+            if (startx < 100 && distx > qualifyDistPxl && Math.abs(disty) < allowedDiagonalPxl) {
                 navEle.classList.add("open");
-            } else if (startx > 150 && distx > -qualifyDistPxl && Math.abs(disty) < allowedDiagonalPxl) {
+            } else if (startx > 150 && distx < -qualifyDistPxl && Math.abs(disty) < allowedDiagonalPxl) {
                 navEle.classList.remove("open");
             }
         })
@@ -111,7 +111,7 @@ var myjs = (function () {
             }
             css.setAttribute("href", target);
 
-            console.log(css.getAttribute("href"))
+            // console.log(css.getAttribute("href"))
         }
     }
 
@@ -175,7 +175,7 @@ var myjs = (function () {
         function fnSubMenuOnClick(e){
             e.preventDefault()
             let article_file_name = this.getAttribute('data-aritcle_file_name');
-            console.log(article_file_name);
+            // console.log(article_file_name);
             xhttp.onreadystatechange = function(){
                 if (this.readyState == 4 ) {
                     if( this.status == 200 ){
@@ -216,11 +216,16 @@ var myjs = (function () {
 
         function callback(){
             let CurrArtBottom = artEle.getBoundingClientRect().bottom;
-            console.log(book.currArtEleBottom, pageBottom)
-            console.log(CurrArtBottom, pageBottom)
+            // console.log(book.currArtEleBottom, pageBottom)
+            // console.log(CurrArtBottom, pageBottom)
             let percentScroll = 100-Math.floor ( (CurrArtBottom-pageBottom)/(book.currArtEleBottom-pageBottom)*100 )
+            if(percentScroll >= 100){
+                percentScroll = 100
+            }else if(percentScroll <= 0){
+                percentScroll = 0;
+            }
             progEle.style.width = percentScroll+"%";
-            console.log(percentScroll)
+            // console.log(percentScroll)
         }
 
 

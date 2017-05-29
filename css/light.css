@@ -2514,7 +2514,7 @@ input::-webkit-inner-spin-button {
       flex: 0 0 64px;
       z-index: 0;
       margin-bottom: 0px;
-      border-radius: 15px;
+      border-radius: 10px;
       display: flex;
       flex-direction: row;
       align-items: center;
@@ -2639,7 +2639,9 @@ input::-webkit-inner-spin-button {
 .progress-bar {
   height: 1px;
   position: relative;
-  margin-bottom: 5px; }
+  margin-bottom: 5px;
+  margin-right: 5px;
+  margin-left: 5px; }
 
 .progress-bar > span {
   background-color: #dd2c00;
