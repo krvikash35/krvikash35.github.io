@@ -48,22 +48,22 @@ h6 { font-size: $h6-fontsize; line-height: 110%; margin: ($h6-fontsize / 2) 0 ($
 }
 
 .para-title{
-  font-weight: 400;
+  font-weight: 700;
   font-size: $h3-fontsize;
   line-height: 0.9;
   // word-break: break-all;
   margin-bottom: 1.5rem;
 }
 .para{
-  font-weight: 300;
+  font-weight: 400;
   font-size: $h5-fontsize;
   margin-bottom: 2rem;
-  line-height: 1.2;
+  line-height: 1.8;
 }
 
 blockquote{
   font-weight: 100;
-  font-style: normal;
+  font-style: italic;
   font-size: $h5-fontsize;
   color: $text-color;
   margin: 10px;
