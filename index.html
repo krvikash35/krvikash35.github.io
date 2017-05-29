@@ -5,7 +5,7 @@
     <title>My Personal Notes And Documentation</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="css/dark.css">
+    <link rel="stylesheet" href="css/light.css">
     <!--<link href="https://fonts.googleapis.com/css?family=Roboto:300,400" rel="stylesheet">-->
     <!--<link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,500,700" type="text/css" rel="stylesheet">-->
     <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400,700" rel="stylesheet">
@@ -124,28 +124,25 @@
 </div>
 </div>
             <div class="divider"></div>
-            <div id="webbasiccss" class="bk-article" >
-    <div class="btitle">Transition Transformation Animation
-    </div>
+            <article>
+    <h2>Transition Transformation Animation</h2>
+    <p>
+        Isn't' it beautifull, if we can bring the motion to html element, if we can control the smoothness or speed of these motion.
+        Such thing can create a beautifull experience for user. these are the thing that is accomplised by CSS3 feature
+        <em>Transition, Transformation and Animation.</em> But how they are defined in CSS, how they work and how to use
+        them! we will learn about these.
+    </p>
 
-    <div class="bpara">
-            Isn't' it beautifull, if we can bring the motion to html element, if we can control the smoothness or speed of these motion.
-            Such thing can create a beautifull experience for user. these are the thing that is accomplised by CSS3 feature <span class="text-accent">Transition, 
-            Transformation and Animation.</span> But how they are defined in CSS, how they work and  how to use them! we will learn about these.</i>
-    </div>
+    <blockquote>
+        Transition allow us to control how fast or smooth an css property of an element will change. Transformation allow us
+        to change the physical properties(size, shape etc) of element. Animation are like superset of transition, it provides
+        ability to change the style of an element with multiple state, whereas transition only control how fast or smooth
+        the sytle will change with two state(start and end).
+    </blockquote>
 
-    <div class="bpara">
-        <blockquote>Transition allow us to control how fast or smooth an css property of an element will change.
-        Transformation allow us to change the physical properties(size, shape etc) of element.
-        Animation are like superset of transition, it provides ability to change the style of an element with multiple state, whereas transition only
-        control how fast or smooth the sytle will change with two state(start and end).</blockquote>
-    </div>
+    <h4>Transition</h4>
 
-   
- 
-<div class="bcode">
-        <pre>
-            <code class="css">
+    <pre><code class="css">
 /* Transition example: transition the change in width of div linearly in 2 sec with 1 sec start delay. */
 div {
     width: 100px;
@@ -159,42 +156,35 @@ div:hover {
     width: 300px;
 }
 /*   transition: width 2s linear 1s; shorthand properties        */    
- </code>
-        </pre>
-</div>
-<div class="bpara">
-    <blockquote>Transtion are triggered whenever browser detect the change in value of transition-property.
- <span class="text-accent">transition-property </span>for that html element allow us to choose which css property of an html element will have transition effect. 
- ie. transition only width of div element.<span class="text-accent"> transition-duration</span> tells in how much time this transition has to be completed. 
- <span class="text-accent">transition-timing-function</span> controls how fast or slow these transition will run. there are various pre-defined 
- function.<span class="text-accent"> transition-delay</span> will delay the start of transition from actual start.
-    </blockquote>
-</div>
+    </code></pre>
 
+    <p>
+        Transtion are triggered whenever browser detect the change in value of transition-property.
+        <span class="text-accent">transition-property </span>for that html element allow us to choose which css property
+        of an html element will have transition effect. ie. transition only width of div element.<span class="text-accent"> transition-duration</span>        tells in how much time this transition has to be completed.
+        <span class="text-accent">transition-timing-function</span> controls how fast or slow these transition will run.
+        there are various pre-defined function.
+        <span class="text-accent"> transition-delay</span> will delay the start of transition from actual start.
+    </p>
 
-
-<div class="bcode">
-        <pre>
-            <code class="css">
+    <h4>Transformation</h4>
+    <pre><code class="css">
 /* Transformation example: rotate div element by 7degree */
 div {
     transform: rotate(7deg);//translate(x,y) scale(x,y) skew(x-angle,y-angle)
 }
 /* there are other function with little change in name and parameter. i.e translate3d(x,y,z), translateX(x) */
-            </code>
-        </pre>
-</div>
-<div class="bpara">
-    <blockquote>
-    This feature allow us to make an specific set of change in the physical size or appearence of an html element. Just attach the 
-    <span class="text-accent"> transform </span>css property to an html element to which you want to transform. transform takes 
-    a specific set of built-in function. It get triggered as soon as page load.
-    </blockquote>
-</div>
+</code></pre>
+    <p>
+        This feature allow us to make an specific set of change in the physical size or appearence of an html element. Just attach
+        the
+        <span class="text-accent"> transform </span>css property to an html element to which you want to transform. transform
+        takes a specific set of built-in function. It get triggered as soon as page load.
 
+    </p>
 
-<div class="bcode">
-        <pre>
+    <h4>Animation</h4>
+    <pre>
             <code class="css">
 /* Animation example: change the background-color of div from red to yellow in 4 second. */
 @keyframes example {
@@ -217,32 +207,14 @@ div {
 }*/
             </code>
         </pre>
-</div>
-<div class="bpara">
-    <blockquote>
-    Animation helps us to apply the different set of style at different time to an html element. Animation start immediatly as soon as page load.
-    first we decide, which element we want to animate by attaching css propery <span class="text-accent"> animation-name</span>. Then we define
-    the animation with keyword <span class="text-accent">@keyframes</span>
-    </blockquote>
-</div>
 
-</div>
+    <p>
+        Animation helps us to apply the different set of style at different time to an html element. Animation start immediatly as
+        soon as page load. first we decide, which element we want to animate by attaching css propery <span class="text-accent"> animation-name</span>.
+        Then we define the animation with keyword <span class="text-accent">@keyframes</span>
+    </p>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+</article>
             <div class="divider"></div>
             
             <div class="divider"></div>

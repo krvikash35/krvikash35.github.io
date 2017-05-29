@@ -2032,13 +2032,13 @@ h6 {
 .black {
   font-weight: 900; }
 
-.para-title, .bk-cont .bk-pg .bk-pg-content .bk-article .btitle {
+.para-title {
   font-weight: 700;
   font-size: 2.2rem;
   line-height: 0.9;
   margin-bottom: 1.5rem; }
 
-.para, .bk-cont .bk-pg .bk-pg-content .bk-article .bpara {
+.para {
   font-weight: 400;
   font-size: 1.4rem;
   margin-bottom: 2rem;
@@ -2219,7 +2219,7 @@ pre {
 .bg-accent {
   background-color: #dd2c00; }
 
-.text-accent {
+.text-accent, .bk-cont .bk-pg .bk-pg-content article em {
   color: #dd2c00; }
 
 .on-hover, .bk-cont .bk-nav ul li a:hover, .bk-cont .bk-nav ul li ul li a:hover, .bk-cont .bk-pg .bk-pg-hdr .clickable:hover {
@@ -2538,18 +2538,43 @@ input::-webkit-inner-spin-button {
           animation-duration: 2s; }
     .bk-cont .bk-pg .bk-pg-content {
       background-color: #f5f5f5;
-      flex: 1;
-      order: 1;
       overflow: auto;
-      border-radius: 15px; }
-      .bk-cont .bk-pg .bk-pg-content .bk-article {
-        padding: 15px; }
-        .bk-cont .bk-pg .bk-pg-content .bk-article .bcode {
+      border-radius: 15px;
+      display: flex;
+      flex-direction: column;
+      padding: 0px;
+      margin: 0px; }
+      .bk-cont .bk-pg .bk-pg-content article {
+        margin: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-content: center;
+        border-bottom: 1px solid black; }
+        .bk-cont .bk-pg .bk-pg-content article pre {
           background-color: #e0e0e0;
-          border-radius: 10px;
-          box-shadow: 0px 0px 2px 2px #e0e0e0;
-          margin-top: 20px;
-          font-weight: 700; }
+          border-radius: 15px;
+          padding-left: 10px; }
+        .bk-cont .bk-pg .bk-pg-content article h1, .bk-cont .bk-pg .bk-pg-content article h2, .bk-cont .bk-pg .bk-pg-content article h3, .bk-cont .bk-pg .bk-pg-content article h4, .bk-cont .bk-pg .bk-pg-content article h5 {
+          margin: 0;
+          padding: 0;
+          line-height: 0.8; }
+        .bk-cont .bk-pg .bk-pg-content article p {
+          margin: 0;
+          padding: 0;
+          line-height: 1.8;
+          font-weight: 400;
+          font-style: normal;
+          font-size: 21px; }
+        .bk-cont .bk-pg .bk-pg-content article blockquote {
+          margin: 0;
+          padding: 0;
+          line-height: 1.8;
+          font-weight: 300;
+          font-style: italic;
+          font-size: 21px; }
+        .bk-cont .bk-pg .bk-pg-content article em {
+          font-style: normal; }
 
 @media (min-width: 800px) {
   .menu-toggle {
