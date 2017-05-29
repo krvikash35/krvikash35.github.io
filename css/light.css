@@ -2513,7 +2513,7 @@ input::-webkit-inner-spin-button {
       background-color: #f5f5f5;
       flex: 0 0 64px;
       z-index: 0;
-      margin-bottom: 15px;
+      margin-bottom: 0px;
       border-radius: 15px;
       display: flex;
       flex-direction: row;
@@ -2543,7 +2543,7 @@ input::-webkit-inner-spin-button {
       display: flex;
       flex-direction: column;
       padding: 10px 20px;
-      min-height: 85%; }
+      min-height: 80vh; }
       .bk-cont .bk-pg .bk-pg-content article {
         border-bottom: 1px solid rgba(0, 0, 0, 0.12);
         margin-bottom: 20px;
@@ -2635,6 +2635,18 @@ input::-webkit-inner-spin-button {
   50% {
     color: #ff3d00;
     transform: scale(1.5); } }
+
+.progress-bar {
+  height: 1px;
+  position: relative;
+  margin-bottom: 5px; }
+
+.progress-bar > span {
+  background-color: #dd2c00;
+  height: 1px;
+  width: 0%;
+  max-width: 100%;
+  display: block; }
 
 .hljs,
 .hljs-subst {

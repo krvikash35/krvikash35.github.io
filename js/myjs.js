@@ -1,6 +1,7 @@
 var myjs = (function () {
     var book = {
-        currArtEleId: null
+        currArtEleId: null,
+        currArtEleBottom: 0
     }
 
     let slideInOutOnSwipe = function () {
@@ -182,6 +183,9 @@ var myjs = (function () {
                     }else{
                         articlePageEle.innerHTML = "<article><h3>No Article Found</h3></article>";
                     }
+                    let artEles = document.getElementById("articles")
+                    book.currArtEleBottom = artEles.getBoundingClientRect().bottom
+                    // console.log(artEles.getBoundingClientRect().bottom)
                 }else{
                     articlePageEle.innerHTML = "<article><h3>Please Wait...</h3></article>";
                 }
@@ -196,8 +200,8 @@ var myjs = (function () {
         let artEle = document.getElementById("articles");
         let progEle = document.getElementById("art_prog_bar");
         let pageBottom = pageEle.getBoundingClientRect().bottom;
-        let OrigArtBottom = artEle.getBoundingClientRect().bottom;
-        pageEle.addEventListener("scroll", throttle(callback, 1000))
+        // let OrigArtBottom = artEle.getBoundingClientRect().bottom;
+        pageEle.addEventListener("scroll", throttle(callback, 500))
 
         function throttle(fn, wait) {
             var time = Date.now();
@@ -211,20 +215,12 @@ var myjs = (function () {
         }
 
         function callback(){
-            let top = artEle.getBoundingClientRect().top;
-            let bottom = artEle.getBoundingClientRect().bottom;
-            let height = artEle.getBoundingClientRect().bottom;
-            let window_height = window.innerHeight
-            let page_ele_height = pageEle.clientHeight;
-            // if( height < page_ele_height ){
-            //     progEle.style.width="50%"
-            // }
-            
             let CurrArtBottom = artEle.getBoundingClientRect().bottom;
-            console.log(CurrArtBottom, OrigArtBottom, pageBottom)
-            let percentScroll = (pageBottom-CurrArtBottom)/(OrigArtBottom-pageBottom)
-            console.log(percentScroll*100)
-            // console.log(top, bottom, height, page_ele_height, window_height)
+            console.log(book.currArtEleBottom, pageBottom)
+            console.log(CurrArtBottom, pageBottom)
+            let percentScroll = 100-Math.floor ( (CurrArtBottom-pageBottom)/(book.currArtEleBottom-pageBottom)*100 )
+            progEle.style.width = percentScroll+"%";
+            console.log(percentScroll)
         }
 
 

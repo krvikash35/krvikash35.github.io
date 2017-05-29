@@ -71,7 +71,7 @@
             background-color: $secondary-color;
             flex: 0 0 64px;
             z-index: 0;
-            margin-bottom: 15px;
+            margin-bottom: 0px;
             border-radius: $bk-brdr-radius;
             display: flex;
             flex-direction: row;
@@ -268,25 +268,21 @@
 
 
 .progress-bar {
-  background-color: red;
-  border-radius: 2px;
-  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.25) inset;
-
-//   width: 450px;
-
-  height: 20px;
-  
+//   background-color: $accent-color;
+  height: 1px;
   position: relative;
-  display: block;
+//   display: block;
   margin-bottom: 5px;
 }
   
 .progress-bar > span {
-  background-color: blue;
-  border-radius: 2px;
-
+//   background-color: blue;
+  background-color: $accent-color;
+  height: 1px;
+  width: 0%;
+  max-width: 100%;
   display: block;
-  text-indent: -9999px;
+//   text-indent: -9999px;
 }
 
 
