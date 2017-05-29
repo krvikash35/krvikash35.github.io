@@ -171,7 +171,7 @@ var myjs = (function () {
         for(var i=0; i<subMenuEles.length; i++){
             subMenuEles[i].addEventListener('click', fnSubMenuOnClick);
         }
-        subMenuEles[1].click()
+        subMenuEles[0].click()
         function fnSubMenuOnClick(e){
             e.preventDefault()
             let article_file_name = this.getAttribute('data-aritcle_file_name');
