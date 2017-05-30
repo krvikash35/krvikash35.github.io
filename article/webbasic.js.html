@@ -150,6 +150,53 @@ getSomeAsynValue(callback);
     <p>
         Callback function is function that can be passed to <em>another function as argument</em>. once called function finished, it should 
         call callback function. So callback function is a way to write asynchronous code in javascript. But writing is this way will create
-        <em>callback hell</em>, when there will be a lot of asynchronous function call.
+        <em>callback hell</em>, when there will be a lot of asynchronous function call. callback hell create readability and maintainability
+        problem. It can be reduced by following some good javascript coding pattern, but not upto the mark.
     </p>
+    
+    <h4>Promise</h4>
+ <pre><code>
+ //CALLBACK HELL...
+ getSomeAsyncValue( function(a){
+    getAnotherAsynValue( function(b){
+        getAnotherAsynValue2( function(c){
+        ...do some work here
+        }
+    })
+ })
+ 
+ //PROMISE...solve callback hell
+ getSomeAsyncValue()
+    .then( function(a){
+        return getAnotherAsynValue()
+    })
+    .then( function(b){
+        return getAnotherAsynValue2()
+    })
+    .then( function(c){
+        ...do some work here, if promise is resolved
+    })
+    .cath( function(){
+        ...cath error here, if promise is rejected
+    })
+    
+ //PROMISE CREATION SYNTAX
+ function fnMyPromise(){
+    return Promise( (resolve, reject) => {
+        ...do some async operation here, get data or error
+        ...if operation is success, then resolve otherwise reject
+        if(success){
+            resolve(data)
+        }else{
+            reject(err)
+        }
+    })
+ }
+ </code></pre>
+    <p>
+        As seen above promise is much better to <em>look and read</em>, so it solve callback hell problem. So what exactly is promise,
+        how we can write function that return promise. Promise has two state <em>Waiting</em> and <em> Finished</em>. When finished
+        it will return result with either rejected or resolved. 
+    </p>
+    
 </article>
