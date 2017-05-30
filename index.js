@@ -9,7 +9,7 @@ var http_server = http.createServer( (req, res) => {
     if( req.url === '/'){
         fn = "index.html"
         ct = "text/html"
-    }else if(  req.url.endsWith( ".css" ) ){
+    }else if(  req.url.endsWith( ".css" ) || req.url.endsWith(".png")){
          fn = req.url.substring(1, req.url.length)
         ct = "text/css"
     }else if( req.url.endsWith( '.js' ) ){
