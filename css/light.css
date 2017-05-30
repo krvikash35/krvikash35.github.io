@@ -2222,7 +2222,7 @@ pre {
 .text-accent, .bk-cont .bk-pg .bk-pg-content article em {
   color: #dd2c00; }
 
-.on-hover, .bk-cont .bk-nav ul li a:hover, .bk-cont .bk-nav ul li ul li a:hover, .bk-cont .bk-pg .bk-pg-hdr .clickable:hover {
+.on-hover, .bk-cont .bk-nav ul li ul li a:hover, .bk-cont .bk-pg .bk-pg-hdr .clickable:hover {
   border-radius: 10px;
   background-color: rgba(153, 153, 153, 0.3); }
 
@@ -2480,6 +2480,12 @@ input::-webkit-inner-spin-button {
     margin: 15px 15px;
     border-radius: 15px;
     overflow: auto; }
+    .bk-cont .bk-nav img {
+      margin-top: 5px;
+      margin-left: 35%;
+      max-height: 60px;
+      max-width: 60px;
+      border-radius: 50%; }
     .bk-cont .bk-nav ul {
       list-style: none;
       margin: 8px 0;
@@ -2487,11 +2493,18 @@ input::-webkit-inner-spin-button {
       .bk-cont .bk-nav ul li a {
         text-transform: uppercase;
         border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+        display: flex;
+        flex-direction: row;
         align-items: center;
         padding: 5px 0px;
         text-decoration: none;
         color: #000000;
         margin: 0 5px; }
+        .bk-cont .bk-nav ul li a:hover {
+          background-color: rgba(153, 153, 153, 0.3);
+          border-radius: 10px; }
+        .bk-cont .bk-nav ul li a .material-icons, .bk-cont .bk-nav ul li a .fa {
+          font-size: 24px; }
         .bk-cont .bk-nav ul li a span {
           padding-left: 3px; }
       .bk-cont .bk-nav ul li ul {
@@ -2570,6 +2583,8 @@ input::-webkit-inner-spin-button {
           line-height: 28px;
           font-weight: 400;
           font-style: normal;
+          font-size: 21px; }
+        .bk-cont .bk-pg .bk-pg-content article ul {
           font-size: 21px; }
         .bk-cont .bk-pg .bk-pg-content article blockquote {
           margin: 0 20px 20px 20px;
