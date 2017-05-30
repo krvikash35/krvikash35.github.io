@@ -117,3 +117,21 @@ var red_house = new House('red');
         </p>
 
 </article>
+
+
+<article>
+    <h2>Callack Promise Asyn-Await</h2>
+    <p>
+        Javascript has support for asynchronous operation i.e it provide some asynchronous api or we can write our own asynchronous code.
+        asynchronous code/operation does not hold cpu time to finish it work, instead notify it caller, when it finishes job through some machanism.
+        if a function is asynchronous, then we can not simply store the return value, and manipulate it in next line. Code is executed line
+        be line, if previous line is asynchronous then next line will not wait for previous line to finish. So we can simpley write asynchronous
+        code in synchronous syntax, until there is language support.
+    </p>
+    
+    <pre><code>
+var a = getSomeAsyncValue(); //
+var result = a*2; //
+console.log(result);
+    </code></pre>
+</article>
