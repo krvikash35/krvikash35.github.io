@@ -139,5 +139,17 @@ getSomeAsyncValue( function(a){
   var result = a*2;
   console.log(result)
 })
+
+//CORRECT WAY...another better callback way
+var callback = function(a){
+    var result = a*2;
+    console.log(result);
+}
+getSomeAsynValue(callback);
     </code></pre>
+    <p>
+        Callback function is function that can be passed to <em>another function as argument</em>. once called function finished, it should 
+        call callback function. So callback function is a way to write asynchronous code in javascript. But writing is this way will create
+        <em>callback hell</em>, when there will be a lot of asynchronous function call.
+    </p>
 </article>
