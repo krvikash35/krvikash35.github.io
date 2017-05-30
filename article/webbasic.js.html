@@ -199,4 +199,25 @@ getSomeAsynValue(callback);
         it will return result with either rejected or resolved. 
     </p>
     
+    <h2>Asyn-Await</h2>
+    <pre><code>
+async function fnMyAsync() {
+ try{
+   var a = await getSomeAsyncValue();
+   var b = await getAnotherAsynValue();
+   var c = await getAnotherAsynValue2();
+   ...do some work here
+ }catch(e){
+  ...catch error here
+ }
+}
+    </code></pre>
+    <p>
+        Asyn await is a way to write asynchronous code in synchronous syntax. its highly readble and managable, quite compareable to 
+        pure synchronous code. It will be introduced in ES7 or ES8, but its already there in node 7. its <em>build on top of promise</em>
+        . we can convert normal callback function to promise, but the same <em>can not be converted</em> to asyn function directly. 
+        To convert normal callback to asyn function, first convert callback to promise then promise to async. So to use asyn await,
+        we must have promise in first place. Note, await must be called <em>inside async funtion only</em>, otherwise it will not work.
+    </p>
+    
 </article>
