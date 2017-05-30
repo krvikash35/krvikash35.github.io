@@ -16,7 +16,7 @@
 
 /* 2. Colors
    ========================================================================== */
-$theme-type: "light" !default; 
+$theme-type: "dark" !default; 
 $theme-color: "grey" !default;
 
 $primary-color: color($theme-color, "darken-4") !default;
@@ -24,6 +24,8 @@ $secondary-color: color($theme-color, "darken-3") !default;
 $accent-color: color("green","accent-3") ;
 $seondary-accent-color: color("green","accent-2");
 $text-color: #FFFFFF !default;
+$text-secondary-color: rgba($text-color, 0.70);
+$text-disabled-color: rgba($text-color, 0.50);
 $success-color: color("green", "base") !default;
 $error-color: color("red", "base") !default;
 $link-color: $accent-color;
@@ -36,6 +38,8 @@ $hover-bg-color: rgba(#CCCCCC, 0.15);
     $accent-color: color("deep-orange","accent-4") ;
     $seondary-accent-color: color("deep-orange","accent-3");
     $text-color: #000000 ;
+    $text-secondary-color: rgba($text-color, 0.54);
+    $text-disabled-color: rgba($text-color, 0.38);
     $success-color: color("green", "base") !default;
     $error-color: color("red", "base") !default;
     $link-color: $accent-color; 
