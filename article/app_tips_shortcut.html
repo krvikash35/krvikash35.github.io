@@ -43,33 +43,64 @@
     </tr>
     
     <tr>
-      <td> Move the modified files to staging area and commit the changes(new files will be ignored) </td>
+      <td> stage modified files and commit changes(ignore new files) </td>
       <td> <code> git commit -a </code> </td>
     </tr>
     
     <tr>
-      <td> </td>
-      <td> </td>
+      <td> push local repo to remote repo </td>
+      <td> <code> git push [remote_repo] [branch] </code> </td>
     </tr>
     
     <tr>
-      <td> </td>
-      <td> </td>
+      <td> pull remote repo to local repo with rebase </td>
+      <td> <code> git pull --rebase [remote repo] [branch] </code></td>
     </tr>
     
     <tr>
-      <td> </td>
-      <td> </td>
+      <td> check git status </td>
+      <td> <code> git status </code> </td>
     </tr>
     
     <tr>
-      <td> </td>
-      <td> </td>
+      <td> see remote repo url detail</td>
+      <td> <code> git remote -v </code> </td>
     </tr>
     
     <tr>
-      <td> </td>
-      <td> </td>
+      <td> add remote name to give url </td>
+      <td> <code> git remote add [remote_name] [url] </code> </td>
+    </tr>
+    
+    
+    
+    
+    
+    
+    
+    <tr>
+      <td> remove remote repo </td>
+      <td> <code> git remote remove [remote_name] </code> </td>
+    </tr>
+    
+    <tr>
+      <td> rename remote repo  </td>
+      <td> <code> git remote rename [old_remote_name] [new_remote_name] </code></td>
+    </tr>
+    
+    <tr>
+      <td> reset remote repo url to given remote name</td>
+      <td> <code> git remote set-url [remote_name] [new_url] [old_url] </code> </td>
+    </tr>
+    
+    <tr>
+      <td> add remote repo url to given remote name</td>
+      <td> <code> git remote set-url add [remote_name] [new_url] </code> </td>
+    </tr>
+    
+    <tr>
+      <td> delete remote repo url to given remote name </td>
+      <td> <code> git remote set-url delete [remote_name] [url] </code> </td>
     </tr>
    </table>
 </article>
