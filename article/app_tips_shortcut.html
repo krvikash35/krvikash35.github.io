@@ -1,12 +1,11 @@
 <article>
   <h2>GIT NOTE AND SHORTCUT</h2>
+  <h4>GIT BASIC</h4>
   <table>
-  
     <tr>
       <th>Requirement</th>
       <th>Solution</th>
     </tr>
-    
     <tr>
       <td>Configure git username </td>
       <td> <code> git config --global user.name [name] </code> </td>
@@ -49,12 +48,12 @@
     
     <tr>
       <td> push local repo to remote repo </td>
-      <td> <code> git push [remote_repo] [branch] </code> </td>
+      <td> <code> git push [remote_name] [branch] </code> </td>
     </tr>
     
     <tr>
       <td> pull remote repo to local repo with rebase </td>
-      <td> <code> git pull --rebase [remote repo] [branch] </code></td>
+      <td> <code> git pull --rebase [remote_name] [branch] </code></td>
     </tr>
     
     <tr>
@@ -62,22 +61,26 @@
       <td> <code> git status </code> </td>
     </tr>
     
+    
+  </table>   
+    
+    
+    
+    
+ <h4>GIT REMOTE</h4>
+  <table>
+    <tr>
+      <th>Requirement</th>
+      <th>Solution</th>
+    </tr>   
     <tr>
       <td> see remote repo url detail</td>
       <td> <code> git remote -v </code> </td>
     </tr>
-    
     <tr>
       <td> add remote name to give url </td>
       <td> <code> git remote add [remote_name] [url] </code> </td>
     </tr>
-    
-    
-    
-    
-    
-    
-    
     <tr>
       <td> remove remote repo </td>
       <td> <code> git remote remove [remote_name] </code> </td>
@@ -103,4 +106,5 @@
       <td> <code> git remote set-url delete [remote_name] [url] </code> </td>
     </tr>
    </table>
+  
 </article>
