@@ -119,6 +119,50 @@ var red_house = new House('red');
 </article>
 
 
+
+
+
+<article>
+    <h2>Inheritance, Delegation, Composition,  DI</h2>    
+    <p>
+        We have seen in many object-oriented programming, polymorphic behaviour and code reuse is done by inheritence. Java has classical
+        inheritance while javascript has portotypical inheritence. javascript prototypical inheritence is also called delegated prototype.
+        Commposition is new trendy way to code-reuse by containing instance of other classes that implement desired functionaliy rather
+        than inheritence from a base or parent class.
+    </p>
+    
+    <p>
+        In today javascript, there are many keyword <code>(i.e new, function constructor, class, extend etc...)</code> which are inspired
+        from popular class based language like <code>java</code>. Since javascript does not have classical inheritence, many purist js
+        developer has recommended to avoid using these syntax. they recommended to use delegation(also kind of prototypical inheritence) using
+        keyword like <code>Object.create(), call(), apply()</code>.
+    </p>
+    
+    <blockquote>
+        <em>Delegation</em> is a way to delegate object method to its parent prototype in prototypical chain until it finds the targeted method. In 
+        Javascript, its type of prototypical inheritence for code-reuse.
+    </blockquote>
+    
+    <p>
+        <em>Composition</em> is not inheritence but its contrasting for same purpose of code-reusablity. suppose if we want to use method 
+        of Object o1 and o2 on o3, then we can compose o3 using o1 and o2. composition in javascript can be implemented using <code>
+        object.assign()</code>. Google new language <em>Go</em> has choosen composition over inheritence.
+    </p>
+    
+    <p>
+        Application are composed of many modules. they wire up together to acheive sole functionality of application. so one module 
+        might be dependendent on other module i.e one module might use other module. At the time of writing module code, its desgin pattern
+        will determine whether module is <em>tighttly coupled</em> or <em>loosly coupled</em> with other module. tight coupled modules are
+        hard to test and manage. there are various way to write loose coupled module like using constructor argument or mehtod argument
+        wherever possible. other way is using <em> Dependency Injection</em> Angular was first framework to promote DI in js at large scale.
+        Currently in node, module pattern like <code>require</code> make our module tightly coupled and there is no large and tested DI 
+        module in nodejs.
+    </p>
+</article>
+
+
+
+
 <article>
     <h2>Callack Promise Asyn-Await</h2>
     <p>
