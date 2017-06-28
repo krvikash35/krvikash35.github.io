@@ -18,6 +18,9 @@ var http_server = http.createServer( (req, res) => {
     }else if( req.url.endsWith( ".html" ) ){
         fn = req.url.substring(1, req.url.length)
         ct = "text/html"
+    }else if(req.url.endsWith(".json")){
+        fn = req.url.substring(1, req.url.length)
+        ct = "application/json"
     }else {
         res.writeHead(400)
         return res.end()
@@ -25,8 +28,8 @@ var http_server = http.createServer( (req, res) => {
     sendHttpResponse(fn, ct, res)
 })
 
-http_server.listen(3000, (err) => {
-    console.log("server is listening on 3000");
+http_server.listen(3001, (err) => {
+    console.log("server is listening on 3001");
 })
 
 
