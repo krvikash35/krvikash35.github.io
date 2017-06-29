@@ -177,3 +177,17 @@
     <body>
 
 </html>
+
+
+
+<!--openssl req \
+  -newkey rsa:4096 \
+  -days 3650 \
+  -nodes \
+  -x509 \
+  -subj "/C=US/ST=Distributed/L=Cloud/O=Cluster/CN=localhost" \
+  -extensions SAN \
+  -config <( cat $( [[ "Darwin" -eq "$(uname -s)" ]]  && echo /System/Library/OpenSSL/openssl.cnf || echo /etc/ssl/openssl.cnf  ) \
+    <(printf "[SAN]\nsubjectAltName='DNS.1:localhost'")) \
+  -keyout key.pem \
+  -out cert.pem-->
