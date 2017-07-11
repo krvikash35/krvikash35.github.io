@@ -24,6 +24,7 @@
         let p2 = new Promise( (resolve, reject) => {
             $.ajax({
                 url: 'https://ulapps-d.unilever.com:3000/service/getLimitedOpenData?UserID=GSMAutoTicket&Node=S1P',
+                crossDomain: true,
                 success: (result) => {resolve(result)}
             })
            
