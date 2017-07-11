@@ -17,13 +17,13 @@
     <script>
         let p1 = new Promise( (resolve, reject) => {
             $.ajax({
-                url: 'demo.json',
+                url: 'https://ulapps-d.unilever.com:3000/',
                 success: (result) => {resolve(result)}
             })
         });
         let p2 = new Promise( (resolve, reject) => {
             $.ajax({
-                url: 'https://localhost:3000/demo',
+                url: 'https://ulapps-d.unilever.com:3000/service/getLimitedOpenData?UserID=GSMAutoTicket&Node=S1P',
                 success: (result) => {resolve(result)}
             })
            
